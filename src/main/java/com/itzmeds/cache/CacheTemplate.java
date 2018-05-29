@@ -52,8 +52,8 @@ public interface CacheTemplate<M> extends CacheConstants {
 	 * 
 	 * @param data
 	 *            - key-value pairs; key is of TYPE String and value is of TYPE M
-	 * @throws CacheWriteException-
-	 *             thrown when the cache entry key set or value set is invalid
+	 * @throws CacheWriteException
+	 *             - thrown when the cache entry key set or value set is invalid
 	 */
 	public void insertOrUpdate(Map<String, M> data) throws CacheWriteException;
 

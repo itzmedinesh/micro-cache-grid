@@ -82,7 +82,7 @@ def customizePom(pom) {
             resolveStrategy = Closure.DELEGATE_FIRST
 
 	        name projectName
-	        description 'Java client(Android friendly) for CRUD operations on REST APIs'
+	        description 'Distributed java cache for micro service based systems using apache ignite data grid'
 	        url 'https://github.com/itzmedinesh/micro-cache-grid.git'
 	        inceptionYear '2016'
 	            
