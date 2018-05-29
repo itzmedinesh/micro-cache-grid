@@ -1,0 +1,101 @@
+cache.grid:
+  grid.name: "ServiceCacheGrid"
+  grid.hostname: "127.0.0.1"
+  grid.communication.port: 47100
+  grid.discovery.port: 47500
+  grid.metricslog.frequency: 0
+  grid.cache:
+    TPNB_CATID_MAPPING:
+      cache.mode: "LOCAL"
+      cache.expirypolicy: "TOUCHED"
+      cache.expiryduration: "ONE_MINUTE"
+      cache.readthrough: true
+      cache.management.enabled: false
+      cache.evictionpolicy: "FIRST_IN_FIRST_OUT"
+      cache.maxsize: 4
+      cache.loader.class: "com.itzmeds.cache.loader.SampleCacheLoader"
+      cache.loader.class.parameters:
+      -
+        service.type: "com.fasterxml.jackson.databind.ObjectMapper"
+    TPNB_CATID_MAPPING_V2:
+      cache.mode: "LOCAL"
+      cache.expirypolicy: "MODIFIED"
+      cache.expiryduration: "ONE_MINUTE"
+      cache.readthrough: false
+      cache.management.enabled: false
+      cache.evictionpolicy: "FIRST_IN_FIRST_OUT"
+      cache.maxsize: 4
+      cache.loader.class: "com.itzmeds.cache.loader.SampleCacheLoader"
+      cache.loader.class.parameters:
+      -
+        service.type: "com.fasterxml.jackson.databind.ObjectMapper"        
+    TEST_MAPPING_1:
+      cache.mode: "LOCAL"
+      cache.expirypolicy: "CREATED"
+      cache.expiryduration: "ETERNAL"
+      cache.readthrough: true
+      cache.management.enabled: false
+      cache.evictionpolicy: "FIRST_IN_FIRST_OUT"
+      cache.maxsize: 4
+      cache.loader.class: "com.itzmeds.cache.loader.SampleCacheLoader"
+    TEST_MAPPING_2:
+      cache.mode: "LOCAL"
+      cache.expirypolicy: "ACCESSED"
+      cache.expiryduration: "ETERNAL"
+      cache.readthrough: true
+      cache.management.enabled: false
+      cache.evictionpolicy: "FIRST_IN_FIRST_OUT"
+      cache.maxsize: 4
+      cache.loader.class: "com.itzmeds.cache.loader.SampleCacheLoader"      
+      cache.loader.class.parameters:
+      -
+        service.type: "java.util.Iterator"
+        service.name: "testInject1"  
+    TEST_MAPPING_3:
+      cache.mode: "LOCAL"
+      cache.expirypolicy: "MODIFIED"
+      cache.expiryduration: "ETERNAL"
+      cache.readthrough: true
+      cache.management.enabled: false
+      cache.evictionpolicy: "FIRST_IN_FIRST_OUT"
+      cache.maxsize: 4
+      cache.loader.class: "com.itzmeds.cache.loader.SampleCacheLoader"      
+      cache.loader.class.parameters:
+      -
+        service.type: "java.util.Iterator1"
+    TPNB_CATID_MAPPING_MODE_EXCEPTION:
+      cache.mode: "WEIRD"
+      cache.expirypolicy: "CREATED"
+      cache.expiryduration: "ONE_MINUTE"
+      cache.readthrough: true
+      cache.management.enabled: false
+      cache.evictionpolicy: "FIRST_IN_FIRST_OUT"
+      cache.maxsize: 4
+      cache.loader.class: "com.itzmeds.cache.loader.SampleCacheLoader"
+    TPNB_CATID_MAPPING_EXPIRY_POLICY_EXCEPTION:
+      cache.mode: "LOCAL"
+      cache.expirypolicy: "WIERD_POLICY"
+      cache.expiryduration: "ONE_MINUTE"
+      cache.readthrough: true
+      cache.management.enabled: false
+      cache.evictionpolicy: "FIRST_IN_FIRST_OUT"
+      cache.maxsize: 4
+      cache.loader.class: "com.itzmeds.cache.loader.SampleCacheLoader"      
+    TPNB_CATID_MAPPING_EXPIRY_EXCEPTION:
+      cache.mode: "LOCAL"
+      cache.expirypolicy: "CREATED"
+      cache.expiryduration: "SIX_MINUTE"
+      cache.readthrough: true
+      cache.management.enabled: false
+      cache.evictionpolicy: "FIRST_IN_FIRST_OUT"
+      cache.maxsize: 4
+      cache.loader.class: "com.itzmeds.cache.loader.SampleCacheLoader"
+    TPNB_CATID_MAPPING_CNF_EXCEPTION:
+      cache.mode: "LOCAL"
+      cache.expirypolicy: "CREATED"
+      cache.expiryduration: "ONE_MINUTE"
+      cache.readthrough: true
+      cache.management.enabled: false
+      cache.evictionpolicy: "FIRST_IN_FIRST_OUT"
+      cache.maxsize: 4
+      cache.loader.class: "com.itzmeds.cache.loader.SampleCacheLoader1"
